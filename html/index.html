@@ -10,21 +10,33 @@
     <form action="" method="post">
         <label for="user_name">Enter name</label>
         <input type="text" placeholder="Enter name" value="Name" maxlength="25" name="user_name" id="user_name"><br><br>
+
         <label for="text">Enter text</label>
         <textarea placeholder="Enter text" maxlength="150"></textarea><br><br>
+
         <label for="Select_a_file ">Select a file </label>
         <input type="file"><br><br>
+
         <label for="user_password">Enter password</label>
+        <p>Create password in format xxxx-xxxx, where insted x must be numbers, letters and special symbols</p>
         <input type="password" placeholder="Enter password" value="password" maxlength="25" name="password" id="user_password"><br><br>
+        <input type="submit" value="Send"><br><br>
+
+
         <label for="user_email">Enter email</label>
         <input type="email" placeholder="Enter email" value="email" maxlength="25" name="email" id="user_email"><br><br>
+
         <label for="date">Enter date</label>
         <input type="date" placeholder="Enter date" value="date" name="date"><br><br>
+
         <label for="time">Enter time</label>
         <input type="time" placeholder="Enter time" value="time" name="time"><br><br>
+
+        <label for="time">Enter phone number</label>
         <p>Create phone number in format 5-xxx-xxx, where insted x must be numbers</p>
-            <p><input type="tel" pattern="5-[0-9]{3}-[0-9]{3}"></p>
-            <p><input type="submit" value="Send"></p>
+        <input type="tel" pattern="5-[0-9]{3}-[0-9]{3}"><br><br>
+        <input type="submit" value="Send"><br><br>
+
         <select>
             <option>Python</option>
             <option>PHP</option>
