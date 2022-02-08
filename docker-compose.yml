@@ -5,7 +5,7 @@ services:
   image:  httpd:2.4.52
   container_name: newserver
   volumes:
-    - './src:/usr/local/apache2/htdocs'
+    - './html:/usr/local/apache2/htdocs'
 
   labels:
       - "traefik.enable=true"
