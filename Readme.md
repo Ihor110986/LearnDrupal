@@ -1,5 +1,4 @@
-# Drupal_Academy
--- git clone git@github.com:dev081023/Drupal_Academy.git
+Drupal_Academy
 
 After downloading, rename the file .env.dist in .env
 
