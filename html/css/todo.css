@@ -1,9 +1,7 @@
 body{
     min-height:100%;
     font-family: Bad Script;
-    background: #91eae4;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to bottom, #91EAE4, #86A8E7, #7F7FD5);
 
 }
 
@@ -57,7 +55,6 @@ button{
     font-size: 15px;
     border-radius:4px;
     font-family:Bad Script;
-    -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     cursor: pointer;
 
@@ -154,11 +151,7 @@ button:hover {
     text-align: center;
     margin-top: 25px;
 }
-/*  if screen size less than 450px, resize tips lists and close btn so they don't overlap */
-@media screen and (max-height: 450px) {
-    .overlay a {
-        font-size: 20px
-    }
+
     .overlay .closebtn {
         font-size: 40px;
         top: 15px;
@@ -168,4 +161,3 @@ button:hover {
         width:100%;
         height:100%;
     }
-}

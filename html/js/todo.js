@@ -1,4 +1,4 @@
-//selecting dom elements for manipulation
+///selecting dom elements for manipulation
 var input = document.querySelector("input[type = 'text']");
 var ul = document.querySelector("ul");
 var container = document.querySelector("div");
