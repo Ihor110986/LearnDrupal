@@ -15,3 +15,6 @@ make down - for stop and delete containers
 make start - for start containers
 
 make stop - for stop container
+
+
+Update index.html and add todo.js and todo.css
