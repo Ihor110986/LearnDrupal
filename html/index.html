@@ -1,61 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</head>
-<body>
-    <form action="" method="post">
-        <div class="mx-auto my-2 my-sm-3 my-lg-4 p-3 p-3 mb-2 bg-secondary text-white ">
-            <label for="user_name">Enter name</label>
-            <input type="text" placeholder="Enter name" value="Name" maxlength="25" name="user_name" id="user_name"><br><br>
+<DOCTYPE html!>
 
-            <label for="text">Enter text</label>
-            <textarea placeholder="Enter text" maxlength="150"></textarea><br><br>
+    <head>
+        <title> My To-Do List App</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel = "Stylesheet" href = "css/todo.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
+     </head>
 
-            <label for="Select_a_file ">Select a file </label>
-            <input type="file"><br><br>
+    <body>
 
-            <label for="user_password">Enter password</label>
-            <p>Create password in format xxxx-xxxx, where insted x must be numbers, letters and special symbols</p>
-            <input type="password" placeholder="Enter password" value="password" maxlength="25" name="password" id="user_password"><br><br>
-            <button type="button" class="btn btn-primary">Send</button><br><br>
+        <div id = "todo">
+            <h1> MY TO-DO LIST <i id="pencil" class="fas fa-pencil-alt"></i> </h1>
 
+            <input type = "text" placeholder="Add New Todo">
 
-            <label for="user_email">Enter email</label>
-            <input type="email" placeholder="Enter email" value="email" maxlength="25" name="email" id="user_email"><br><br>
+            <ul class="todos">
 
-            <label for="date">Enter date</label>
-            <input type="date" placeholder="Enter date" value="date" name="date"><br><br>
+                <li><span><i class="fas fa-trash-alt"></i></span>Go to the salon</li>
+            </ul>
 
-            <label for="time">Enter time</label>
-            <input type="time" placeholder="Enter time" value="time" name="time"><br><br>
-
-            <label for="time">Enter phone number</label>
-            <p>Create phone number in format 5-xxx-xxx, where insted x must be numbers</p>
-            <input type="tel" pattern="5-[0-9]{3}-[0-9]{3}"><br><br>
-            <button type="button" class="btn btn-primary">Send</button><br><br>
-
-            <select>
-                <option>Python</option>
-                <option>PHP</option>
-                <option>Drupal</option>
-                <option>HTML</option>
-                <option>CSS</option>
-            </select><br><br>
-            <label for="checkbox">Put a tick </label>
-            <input type="checkbox" name="checkbox"><br><br>
-            <label for="radio">Put a tick </label>
-            <input type="radio" name="radio">
-            <input type="radio" name="radio"><br><br>
-            <button type="button" class="btn btn-primary">Send</button><br><br>
-            <button type="button" class="btn btn-primary">Reset</button><br><br>
-            <button type="button" class="btn btn-primary">Done</button><br><br>
+            <div id= "buttons">
+                <button class="save">Save</button>
+                <button class="clear">Clear</button>
+                <button class="tipBtn">Tips</button>
+            </div>
         </div>
-       </form>
-</body>
-</html>
+
+        <div id = "overlay">
+           <a href="javascript:void(0)" class="closebtn">&times;</a>
+           <ul class="tips">
+               <li>Click on the pencil to hide or show input area</li>
+               <li>Type text into input area and press enter to add todo to list</li>
+               <li>Hover over the todo and click the on trash can to delete</li>
+               <li>Click the clear button to clear all todos from list</li>
+               <li>Click the Save button to save your todos to access them later even if you exit the browser </li>
+            </ul>
+
+        </div>
+        <script src="Js/todo.js"></script>
+    </body>
