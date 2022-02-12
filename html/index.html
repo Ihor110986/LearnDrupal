@@ -1,43 +1,62 @@
-<DOCTYPE html!>
-
-    <head>
-        <title>To-Do List App</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel = "Stylesheet" href = "css/todo.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
-     </head>
-
-    <body>
-
-        <div id = "todo">
-            <h1> MY TO-DO LIST <i id="pencil" class="fas fa-pencil-alt"></i> </h1>
-
-            <input type = "text" placeholder="Add New Todo">
-
-            <ul class="todos">
-                <li><span><i class="fas fa-trash-alt"></i></span>Clean the apartment </li>
-                <li><span><i class="fas fa-trash-alt"></i></span>Go to the Gym</li>
-                <li><span><i class="fas fa-trash-alt"></i></span>Cook something delicious </li>
-            </ul>
-
-            <div id= "buttons">
-                <button class="save">Save</button>
-                <button class="clear">Clear</button>
-                <button class="tipBtn">Tips</button>
-            </div>
-        </div>
-
-        <div id = "overlay">
-           <a href="javascript:void(0)" class="closebtn">&times;</a>
-           <ul class="tips">
-               <li>Click on the pencil to hide or show input area</li>
-               <li>Type text into input area and press enter to add todo to list</li>
-               <li>Hover over the todo and click the on trash can to delete</li>
-               <li>Click the clear button to clear all todos from list</li>
-               <li>Click the Save button to save your todos to access them later even if you exit the browser </li>
-            </ul>
-
-        </div>
-        <script src="js/todo.js"></script>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<div class="mx-auto my-2 my-sm-3 my-lg-4 p-3 p-3 mb-2 bg-secondary text-white ">
+<div class="form-wrap">
+    <div class="profile"><img src="photo form/photo_form.jpg">
+      <h1>Registration</h1>
+    </div>
+    <form method="post" action="">
+      <div>
+        <label for="first_name">First name</label>
+        <input type="text" first_name="first_name" required>
+      </div>
+      <div>
+        <label for="last_name">last name</label>
+        <input type="text" last_name="last_name" required>
+      </div>
+      <div class="radio">
+        <span>Sex</span>
+        <label>
+          <input type="radio" name="sex" value="male">male
+          <div class="radio-control male"></div>
+        </label>
+        <label>
+          <input type="radio" name="sex" value="female">female
+          <div class="radio-control female"></div>
+        </label>
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+        tittle="must be in the following order: characters@characters.domain (characters followed by an @ sign, followed by more characters, and then a ">
+      </div>
+      <div>
+        <label for="pwd">Password:</label>
+        <input type="password" id="pwd" name="pwd"
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters">
+      </div>
+      <div>
+        <label for="country">Country</label>
+        <select name="country">
+          <option>Choose your country of residence </option>
+          <option value="Ukraine">Ukraine</option>
+          <option value="USA">USA</option>
+          <option value="England">England</option>
+        </select>
+        <div class="select-arrow"></div>
+      </div>
+      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="reset" class="btn btn-warning">Reset</button>
+    </form>
+  </div>
+</div>
