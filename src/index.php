@@ -12,12 +12,12 @@
     <div class="container">
         <h1>To-do list</h1>
         <form action="/add.php" method="post">
-            <input type="text" name="task" id="task" placeholder="Must  be to make.." class="form-control">
-            <button type="submit" name="sendTask" class="btn btn-cuccess">Send</button>
+            <input type="text" name="task" id="task" placeholder="Must be to make.." class="form-control">
+            <button type="submit" name="sendTask" class="btn btn-success">Send</button>
         </form>
 
         <?php
-         require 'configDB.php';
+        require 'configDB.php';
 
          echo '<ul>';
          $query =$pdo->query('SELECT * FROM `tasks` ORDER BY `id` DESC');

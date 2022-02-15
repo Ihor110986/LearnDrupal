@@ -9,7 +9,7 @@
 
     $sql = 'INSERT INTO tasks(task) VALUES(:task)';
     $query = $pdo->prepare($sql);
-    $query->execute(['task => $task']);
+    $query->execute(['task' => $task]);
 
     header('Location: /');
 
