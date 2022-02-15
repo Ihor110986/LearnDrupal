@@ -1,19 +1,23 @@
 version: '3'
 
 services:
- apache:
-  image:  httpd:2.4.52
-  container_name: newserver
-  volumes:
-    - './html:/usr/local/apache2/htdocs'
+  server:
+    build:
+      context: .
+      dockerfile: ./docker/server/Dockerfile
+    container_name: server
+    volumes:
+    - './src:/var/www/html'
+    # - './php:/usr/local/apache2/htdocs'
+    # - './html:/usr/local/apache2/htdocs'
 
-  labels:
+    labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.apache.rule=Host(`new.localhost`)"
-      - "traefik.http.services.apache.loadbalancer.server.port=80"
+      - "traefik.http.routers.server.rule=Host(`${PROJECT_BASE_URL}`)"
+      - "traefik.http.services.server.loadbalancer.server.port=80"
 
 
- db:
+  db:
     image: mysql
     container_name: newdb
     volumes:
@@ -26,7 +30,7 @@ services:
       MYSQL_USER: ${DB_USERNAME}
       MYSQL_PASSWORD: ${DB_PASSWORD}
 
- phpmyadmin:
+  phpmyadmin:
     image: phpmyadmin/phpmyadmin
     container_name: phpnewadmin
     links:
@@ -39,10 +43,10 @@ services:
     restart: always
 
     labels:
-      - "traefik.http.routers.phpmyadmin.rule=Host(`phpnewadmin.new.localhost`)"
+      - "traefik.http.routers.phpmyadmin.rule=Host(`phpnewadmin.${PROJECT_BASE_URL}`)"
       - "traefik.http.services.phpmyadmin.loadbalancer.server.port=80"
 
- traefik:
+  traefik:
     image: "traefik:v2.6"
     container_name: "traefik"
     command: --api.insecure=true --providers.docker
