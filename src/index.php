@@ -10,9 +10,9 @@
 </head>
 <header>
     <div class="topnav">
-        <a class="active" href="#home">Home</a>
         <a href="registration.php">Registration</a>
         <a href="authorization.php">Authorization</a>
+        <a href="feedback.php">Feedback</a>
     </div>
 
 

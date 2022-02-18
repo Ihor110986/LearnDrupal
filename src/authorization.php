@@ -7,6 +7,12 @@
     <title>Authorization</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <div class="topnav">
+        <a class="active" href="index.php">Home</a>
+        <a href="registration.php">Registration</a>
+        <a href="feedback.php">Feedback</a>
+    </div>
+
 </head>
 <body>
     <div class="container mt-4">
