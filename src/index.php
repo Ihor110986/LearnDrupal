@@ -24,7 +24,7 @@
         <h1>To-do list</h1>
         <form class="form" action="/add.php" method="post">
             <input type="text" name="task" id="task" placeholder="Must be to make.." class="form-control">
-            <button type="submit" name="sendTask" class="btn btn-success">Send</button>
+            <button type="submit" name="sendTask" class="btn btn-success">Add new task</button>
         </form>
 
         <?php
