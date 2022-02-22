@@ -1,6 +1,7 @@
 version: '3'
 
 services:
+
   server:
     build:
       context: .
@@ -56,3 +57,12 @@ services:
        - "8080:8080"
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
+
+  mailhog:
+    image: mailhog/mailhog
+    logging:
+      driver: 'none'  # disable saving logs
+    ports:
+      - 1025:1025 # smtp server
+      - 8025:8025 # web ui
+
