@@ -12,4 +12,8 @@ RUN curl -sSk https://getcomposer.org/installer | php -- --disable-tls && \
 
 RUN rm -rf /var/lib/apt/lists/*
 
+RUN echo "sendmail_path=/usr/sbin/sendmail -S mailhog:1025" >> /usr/local/etc/php/conf.d/sendmail.ini
+
+
 WORKDIR /var/www/html
+
