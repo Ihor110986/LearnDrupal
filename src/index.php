@@ -16,6 +16,7 @@
     </div>
 
 
+
     <!-- <a href="registration.php">Registration</a> |
     <a href="authorization.php">Authorization</a> -->
 </header>
@@ -28,6 +29,7 @@
         </form>
 
         <?php
+        require "path/to/vendor/autoload.php";
         require 'configDB.php';
 
          echo '<ul>';

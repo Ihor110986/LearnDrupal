@@ -1,2 +1,4 @@
 .newsql-data/
 .env
+.composer.phar
+/vendor/
