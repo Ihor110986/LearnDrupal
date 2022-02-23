@@ -29,7 +29,7 @@
         </form>
 
         <?php
-        require "path/to/vendor/autoload.php";
+        // require "path/to/vendor/autoload.php";
         require 'configDB.php';
 
          echo '<ul>';
