@@ -7,8 +7,7 @@ RUN apt-get update \
 
 RUN docker-php-ext-install pdo_mysql zip
 
-RUN curl -sSk https://getcomposer.org/installer | php -- --disable-tls && \
-  mv composer.phar /usr/local/bin/composer
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 RUN rm -rf /var/lib/apt/lists/*
 

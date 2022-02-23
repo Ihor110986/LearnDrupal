@@ -1,13 +1,7 @@
 {
-    "name": "ihor.shevchenko/beetroot_academy_example",
-    "description": "Just a test project",
+    "name": "root/html",
     "type": "project",
-    "autoload": {
-        "psr-4": {
-            "IhorShevchenko\\BeetrootAcademyExample\\": "src/"
-        }
-    },
     "require": {
-        "propel/propel": "~2.0@dev"
+        "psr/log": "^1.1"
     }
 }
