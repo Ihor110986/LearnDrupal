@@ -31,9 +31,7 @@ $("#sendMail").on("click", function() {
             $("#sendMail").prop("disabled, true");
         },
         success: function(data) {
-            if(!data)
-                alert("Does not send the message because were errors there!");
-            else
+            
             $("#mailForm").trigger("reset");
             $("#sendMail").prop("disabled, false");
         }
